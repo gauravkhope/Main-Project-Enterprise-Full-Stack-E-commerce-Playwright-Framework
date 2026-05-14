@@ -1,0 +1,239 @@
+﻿test-platform/
+  api/
+    client/
+      auth-client.ts
+      base-client.ts
+      request-manager.ts
+    constants/
+      auth.endpoints.ts
+      user.endpoints.ts
+    fixtures/
+      api.fixture.ts
+    middleware/
+    payloads/
+    schemas/
+      auth/
+        login.schema.ts
+      users/
+        user.schema.ts
+    services/
+      auth/
+        auth.service.ts
+      users/
+        user.service.ts
+    types/
+    utils/
+      env.ts
+      logger.ts
+      token-manager.ts
+    validators/
+      business/
+        auth.validator.ts
+        user.validator.ts
+      schema-validator.ts
+  config/
+    playwright.api.config.ts
+    playwright.config.ts
+  core/
+    auth/
+      auth-storage/
+        checkout-auth.json
+      auth.setup.ts
+      authStorage.ts
+      globalTeardown.ts
+      loginHelper.ts
+    fixtures/
+      auth.extend.ts
+      baseTest.ts
+    hooks/
+      testHooks.ts
+    resilience/
+      retryEngine.ts
+    utils/
+      time.util.ts
+    wrappers/
+      uiActions.ts
+  data/
+    brands/
+      fixedBrands.ts
+      randomBrands.ts
+    factories/
+      userFactory.ts
+    price/
+      priceData.ts
+    static/
+      users.json
+  e2e/
+    helpers/
+      orders.helper.ts
+    products/
+      filters.stress.spec.ts
+      pagination.spec.ts
+    tests/
+      api/
+        smoke/
+          auth/
+            login.spec.ts
+          users/
+            profile.spec.ts
+      cart.spec.ts
+      cartPage.spec.ts
+      category.spec.ts
+      checkout.spec.ts
+      checkout2.spec.ts
+      completeFlow.spec.ts
+      drawer.spec.ts
+      filters.spec.ts
+      filtersCombo.spec.ts
+      home.spec.ts
+      login.spec.ts
+      navbar.spec.ts
+      orderCancel.spec.ts
+      orderConfirmation.spec.ts
+      orderReturnReplace.spec.ts
+      orders.spec.ts
+      products.spec.ts
+      search.spec.ts
+      trending.spec.ts
+      wishlist.spec.ts
+    global.d.ts
+  reports/
+    screenshots/
+      All product cards displayed.png
+      Alternate Category Validation.png
+      Category → Pagination.png
+      Category → See All → Pagination.png
+      Click suggestion navigates to product page.png
+      Continue typing updates suggestions.png
+      Dropdown hides when input cleared.png
+      Empty credentials validation.png
+      Invalid credentials.png
+      Invalid email format.png
+      Invalid search shows no results.png
+      Long input values.png
+      Navigate to home.png
+      Navigate to orders.png
+      Navigation works.png
+      Only email empty.png
+      Only password empty.png
+      Partial typing shows suggestions.png
+      Product grid visible.png
+      Profile dropdown works.png
+      Random invalid password.png
+      Rapid typing does not break dropdown.png
+      Search with full keyword.png
+      Slide visibility logic.png
+      Stress test - rapid type & clear (10 iterations).png
+      Valid login.png
+      Validate categories completely.png
+      Validate Category Section (Order Based).png
+      Validate Category Section Completely.png
+  shared/
+    builders/
+      auth/
+        login.builder.ts
+  test-platform/
+    reports/
+      screenshots/
+        Drawer closes.png
+        Drawer hidden by default.png
+        Drawer opens.png
+        Guest sees login option.png
+        Navigate to home.png
+        Navigate to orders.png
+        Navigation works.png
+        Profile dropdown works.png
+        Slide visibility logic.png
+  ui/
+    pages/
+      cart.page.ts
+      cartPage.page.ts
+      category.page.ts
+      checkout.page.ts
+      completeFlow.page.ts
+      drawer.component.ts
+      filters.page.ts
+      filtersCombo.page.ts
+      home.page.ts
+      login.page.ts
+      navbar.component.ts
+      orderCancel.page.ts
+      orderConfirmation.page.ts
+      orderReturnReplace.page.ts
+      orders.page.ts
+      products.page.ts
+      search.component.ts
+      trending.component.ts
+      wishlist.page.ts
+    flows/
+      cart.flow.ts
+      cartPage.flow.ts
+      category.flow.ts
+      checkout.flow.ts
+      completeFlow.flow.ts
+      drawer.flow.ts
+      filters.flow.ts
+      filtersCombo.flow.ts
+      home.flow.ts
+      login.flow.ts
+      navbar.flow.ts
+      orderCancel.flow.ts
+      orderConfirmation.flow.ts
+      orderReturnReplace.flow.ts
+      orders.flow.ts
+      products.flow.ts
+      search.flow.ts
+      trending.flow.ts
+      wishlist.flow.ts
+  validation/
+    assertions/
+      cartAssertion.ts
+      cartPageAssertion.ts
+      categoryAssertions.ts
+      checkout.assert.ts
+      completeFlow.assert.ts
+      drawerAssertions.ts
+      filters.assertions.ts
+      filtersCombo.assertions.ts
+      homeAssertions.ts
+      loginAssertions.ts
+      navbarAssertions.ts
+      orderCancel.assert.ts
+      orderConfirmation.assert.ts
+      orderReturnReplace.assert.ts
+      orders.assert.ts
+      productsAssertions.ts
+      searchAssertions.ts
+      trendingAssertions.ts
+      wishlist.assertions.ts
+  explaination.md
+test-results/
+  .last-run.json
+tests/
+  Checkout&Order/
+    cancelorder.spec.ts
+    Checkout.spec.ts
+    checkout2.spec.ts
+    orderConfirmationPage.spec.ts
+    orderPage2.spec.ts
+    ordersPage.spec.ts
+    return&replace2.spec.ts
+  product/
+    addToCart.spec.ts
+    addTocartpage.spec.ts
+    addToWhishtlist.spec.ts
+    categorysection.spec.ts
+    comboe2e.spec.ts
+    complete_flow.spec.ts
+    filter2.spec.ts
+    filters.spec.ts
+    pagination.spec.ts
+    productPageLoad.spec.ts
+    stress.spec.ts
+    trendingproduct.spec.ts
+  home.spec.ts
+  humberger.spec.ts
+  login.spec.ts
+  navbar.spec.ts
+  register.spec.ts
+  searchbar.spec.ts

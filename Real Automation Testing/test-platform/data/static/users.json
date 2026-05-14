@@ -1,0 +1,31 @@
+{
+  "validUser": {
+    "email": "gauravkhope31@gmail.com",
+    "password": "Gaurav31"
+  },
+  "invalidUser": {
+    "email": "test@example.com",
+    "password": "wrongPassword123"
+  },
+  "emptyUser": {
+    "email": "",
+    "password": ""
+  },
+  
+  "invalidEmailFormat": {
+    "email": "invalid-email",
+    "password": "SomePassword123"
+  },
+  "onlyEmailEmpty": {
+    "email": "",
+    "password": "SomePassword123"
+  },
+  "onlyPasswordEmpty": {
+    "email": "test@example.com",
+    "password": ""
+  },
+  "longInputUser": {
+    "email": "verylongemailaddressverylongemailaddress@test.com",
+    "password": "VeryLongPassword123456789"
+  }
+}
