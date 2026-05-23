@@ -43,7 +43,10 @@ export class CheckoutFlow {
   }
 
   async completeValidPayment(productName: string) {
-    await this.openPayment(productName);
+    // await this.openPayment(productName);
+       if (productName) {
+        await this.openPayment(productName);
+    }
 
     const modal = this.checkoutPage.modal();
 

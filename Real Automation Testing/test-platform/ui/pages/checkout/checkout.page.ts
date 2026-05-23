@@ -22,10 +22,10 @@ export class CheckoutPage {
   }
 
   async fillShipping() {
-    await this.page.locator('input[name="address"]').fill('123 Main St');
-    await this.page.locator('input[name="city"]').fill('Akola');
+    await this.page.locator('input[name="address"]').fill('BKC road , Bandra East');
+    await this.page.locator('input[name="city"]').fill('Mumbai');
     await this.page.locator('input[name="state"]').fill('Maharashtra');
-    await this.page.locator('input[name="zip"]').fill('444001');
+    await this.page.locator('input[name="zip"]').fill('400051');
     await this.page.locator('input[name="phone"]').fill('9689769664');
   }
 
