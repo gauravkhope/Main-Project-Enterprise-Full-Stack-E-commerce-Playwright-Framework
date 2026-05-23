@@ -7,6 +7,9 @@ export class WishlistFlow {
   async openProducts() {
     await this.pageObj.page.goto('/products');
   }
+  async openHomeProducts() {
+    await this.pageObj.page.goto('/');
+  }
 
   async addToWishlist(productName: string) {
     const product = this.pageObj.getProductCardByName(productName);

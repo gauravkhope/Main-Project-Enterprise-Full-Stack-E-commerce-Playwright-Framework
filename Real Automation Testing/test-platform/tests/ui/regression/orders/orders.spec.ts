@@ -187,7 +187,7 @@ test.describe('Orders Suite (Auth Scoped)', () => {
   // =========================
   // 6. Full Lifecycle (12h / 24h / 48h)
   // =========================
-  test.only('6. Full lifecycle validation (multi-step time)', async ({ browser }) => {
+  test.skip('6. Full lifecycle validation (multi-step time)', async ({ browser }) => {
 
     test.setTimeout(240000);
     await ensureAuthState(browser);

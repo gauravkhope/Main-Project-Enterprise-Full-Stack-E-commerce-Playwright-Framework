@@ -17,7 +17,7 @@ test.describe("Add to Cart - Product Card Behavior", () => {
     await flow.openProducts();
   });
 
-  // 1️⃣ Hover behavior
+  // 1️⃣ Hover behavior 
   test("Add to Cart button hover behavior", async () => {
     const product = pageObj.getProductCardByName(productName);
     const addBtn = pageObj.getAddButton(product);
@@ -29,7 +29,7 @@ test.describe("Add to Cart - Product Card Behavior", () => {
     await CartAssertions.expectVisible(addBtn);
   });
 
-  // 2️⃣ Add product
+  // 2️⃣ Add product 
   test("Add product to cart", async () => {
     const product = pageObj.getProductCardByName(productName);
 
@@ -48,7 +48,7 @@ test.describe("Add to Cart - Product Card Behavior", () => {
     await CartAssertions.expectCartCount(pageObj.cartCount, "1");
   });
 
-  // 3️⃣ Button changes
+  // 3️⃣ Button changes 
   test("Button text changes to In Cart", async () => {
     const product = pageObj.getProductCardByName(productName);
     const btn = pageObj.getCartButton(product);
@@ -61,7 +61,7 @@ test.describe("Add to Cart - Product Card Behavior", () => {
     await CartAssertions.expectText(btn, /in cart/i);
   });
 
-  // 4️⃣ Quantity increase
+  // 4️⃣ Quantity increase 
   test("Quantity increases when clicking In Cart", async () => {
     const product = pageObj.getProductCardByName(productName);
 
@@ -79,7 +79,7 @@ test.describe("Add to Cart - Product Card Behavior", () => {
     await CartAssertions.expectCartCount(pageObj.cartCount, "2");
   });
 
-  // 5️⃣ Multiple clicks
+  // 5️⃣ Multiple clicks 
   test("Multiple quantity increase", async () => {
     const product = pageObj.getProductCardByName(productName);
 
@@ -91,7 +91,7 @@ test.describe("Add to Cart - Product Card Behavior", () => {
     await CartAssertions.expectCartCount(pageObj.cartCount, "3");
   });
 
-  // 6️⃣ Multiple products
+  // 6️⃣ Multiple products 
   test("Add multiple products to cart", async () => {
     const cards = pageObj.productCards;
 

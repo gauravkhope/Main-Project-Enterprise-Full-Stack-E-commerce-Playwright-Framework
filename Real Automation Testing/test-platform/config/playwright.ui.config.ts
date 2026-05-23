@@ -12,7 +12,7 @@ export default defineConfig({
 
   use: {
     baseURL: 'https://smartshop-one.vercel.app/', // change if needed
-    headless: true,
+    headless: false,
     trace: 'on-first-retry',
   },
 

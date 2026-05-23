@@ -4,6 +4,7 @@ export class WishlistPage {
   readonly page: Page;
 
   readonly productCards: Locator;
+  readonly productHomeCards: Locator;
   readonly navbarWishlist: Locator;
   readonly wishlistCount: Locator;
   readonly wishlistItems: Locator;
@@ -13,6 +14,7 @@ export class WishlistPage {
     this.page = page;
 
     this.productCards = page.getByTestId('product-card');
+    this.productHomeCards = page.getByTestId("trending-product-card");
     this.navbarWishlist = page.getByTestId('navbar-wishlist');
     this.wishlistCount = this.navbarWishlist.locator('span');
     this.wishlistItems = page.getByTestId('wishlistcard');
@@ -22,6 +24,11 @@ export class WishlistPage {
   getProductCardByName(name: string) {
     return this.productCards.filter({
       has: this.page.getByTestId('product-title').filter({ hasText: name }),
+    });
+  }
+  getHomeProductCardByName(name: string) {
+    return this.productHomeCards.filter({
+      has: this.page.getByRole("heading", { name: name , exact: true}),
     });
   }
 

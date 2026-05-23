@@ -190,7 +190,7 @@ export class CompleteFlow {
       await this.completePage
         .cardNumberInput()
         .fill(
-          '4111111111111111'
+          '4246258264151111'
         );
 
       await this.completePage
@@ -199,7 +199,7 @@ export class CompleteFlow {
 
       await this.completePage
         .cardCvvInput()
-        .fill('123');
+        .fill('101');
 
       await this.completePage
         .confirmCardButton()

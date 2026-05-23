@@ -50,7 +50,7 @@ test.describe('Order Cancel Suite', () => {
   // =========================
   // 2. Icon Validation
   // =========================
-  test.only('2. Cancel Order - icon and color validation',async ({ orderCancelPage, orderCancelFlow }) => {
+  test('2. Cancel Order - icon and color validation',async ({ orderCancelPage, orderCancelFlow }) => {
 
       await orderCancelPage.openOrdersPage();
 

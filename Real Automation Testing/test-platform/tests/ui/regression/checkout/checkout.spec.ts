@@ -3,7 +3,7 @@ import { CheckoutAssertions } from '../../../../validation/ui/checkout/checkout.
 
 test.describe('Checkout Tests (Auth Scoped)', () => {
 
-  test.only('1. Navigate from Home → PDP → Checkout', async ({ checkoutFlow, checkoutPage }) => {
+  test('1. Navigate from Home → PDP → Checkout', async ({ checkoutFlow, checkoutPage }) => {
 
     await checkoutFlow.goToCheckout("Galaxy S25 ultra");
 
@@ -68,7 +68,7 @@ test.describe('Checkout Tests (Auth Scoped)', () => {
     );
   });
 
-  test.skip('7. Valid card → payment confirmed → place order → success', async ({ checkoutFlow, checkoutPage }) => {
+  test('7. Valid card → payment confirmed → place order → success', async ({ checkoutFlow, checkoutPage }) => {
 
     test.setTimeout(60000); // same as original
 

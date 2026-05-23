@@ -14,7 +14,7 @@ test.describe('Cart Feature - Full Suite', () => {
     await flow.openProducts();
   });
 
-  // 1️⃣ Add → verify → remove → empty
+  // 1️⃣ Add → verify → remove → empty 
   test('Add product → verify → remove → empty', async () => {
     const name = "H&M A-line Skirt Model 2 Variant 2";
 
@@ -36,7 +36,7 @@ test.describe('Cart Feature - Full Suite', () => {
   });
 
   // 2️⃣ Add 2 → total calc
-  test.only('Add 2 products → total calculation', async () => {
+  test('Add 2 products → total calculation', async () => {
     const cards = pageObj.productCards;
 
     const p1 = cards.nth(0);
@@ -105,13 +105,14 @@ test.describe('Cart Feature - Full Suite', () => {
     await CartAssertions.expectVisible(
       pageObj.page.getByText(/at least 1 qty is required/i)
     );
-  });
+  }); 
 
   // 7️⃣ Continue shopping
-  test('Continue shopping navigation', async () => {
+  test.only('Continue shopping navigation', async () => {
     await pageObj.page.goto('/cart');
 
     await pageObj.page.getByRole('link', { name: /continue shopping/i }).click();
+   await pageObj.page.waitForTimeout(4000); // wait for navigation
 
     await CartAssertions.expectVisible(pageObj.productCards.first());
   });
