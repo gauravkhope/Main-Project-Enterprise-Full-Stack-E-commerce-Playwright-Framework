@@ -21,6 +21,9 @@ import { LoginAssertions } from '../../../validation/ui/auth/loginAssertions';
   await page.getByRole("link", { name: "Proceed to Checkout" }).click();
   await checkoutPage.fillShipping()
   await checkoutPage.proceedToPayment();
-  await checkoutFlow.completeValidPayment("");
+  await checkoutFlow.completeValidPayment();
+  await page.waitForTimeout(4000);
+  await page.getByRole("button", { name: "View Order Details" }).click();
+  await page.getByRole("button", { name: "View Order Details" }).click();
   await page.waitForTimeout(4000);
 })

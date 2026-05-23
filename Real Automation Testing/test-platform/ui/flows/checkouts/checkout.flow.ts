@@ -13,7 +13,7 @@ export class CheckoutFlow {
   }
 
   async openPayment(productName: string) {
-    await this.goToCheckout(productName);
+   await this.goToCheckout(productName);
     await this.checkoutPage.fillShipping();
     await this.checkoutPage.proceedToPayment();
   }
@@ -42,9 +42,9 @@ export class CheckoutFlow {
     return { number, cvv, expiry: `${month}/${year}` };
   }
 
-  async completeValidPayment(productName: string) {
+  async completeValidPayment(productName: string | undefined = undefined) {
     // await this.openPayment(productName);
-       if (productName) {
+      if (productName !== undefined) {
         await this.openPayment(productName);
     }
 
