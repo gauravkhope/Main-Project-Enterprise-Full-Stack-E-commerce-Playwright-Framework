@@ -17,6 +17,12 @@ export class WishlistFlow {
     await heart.click();
   }
 
+   async addToWishlistHome(productName: string) {
+    const product = this.pageObj.getHomeProductCardByName(productName);
+    const heart = this.pageObj.getHeartIcon(product);
+    await heart.click();
+  }
+
   async openWishlist() {
     await this.pageObj.navbarWishlist.click();
   }

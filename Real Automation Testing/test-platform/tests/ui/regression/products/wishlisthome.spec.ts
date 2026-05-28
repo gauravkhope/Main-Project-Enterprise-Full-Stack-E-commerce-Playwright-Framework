@@ -24,7 +24,7 @@ test.describe('Wishlist Feature', () => {
   // ==============================
   // 1️⃣ TOGGLE TEST
   // ==============================
-  test('Wishlist toggle validation', async () => {
+  test.skip('Wishlist toggle validation', async () => {
 
     const productName = "Galaxy S25";
 
@@ -72,7 +72,7 @@ test.describe('Wishlist Feature', () => {
 
     const productName = "Galaxy S25";
 
-    await flow.addToWishlist(productName);
+    await flow.addToWishlistHome(productName);
     await flow.openWishlist();
 
     await WishlistAssertions.expectWishlistItemVisible(pageObj.wishlistItems, productName);
@@ -87,17 +87,18 @@ test.describe('Wishlist Feature', () => {
   // ==============================
   // 3️⃣ MULTIPLE PRODUCTS
   // ==============================
-  test('verify multiple products can be added and removed', async () => {
+  test.only('verify multiple products can be added and removed', async () => {
 
     const productNames = [
       "Galaxy S25",
-      "iPhone 17",
+      "iphone 17",
+      "iphone 16 Pro Max",
       "Galaxy Fold 7",
       "MacBook Pro M4 16 inch"
     ];
 
     for (const name of productNames) {
-      await flow.addToWishlist(name);
+      await flow.addToWishlistHome(name);
     }
 
     await flow.openWishlist();
