@@ -1,25 +1,41 @@
 import { defineConfig } from '@playwright/test';
+import { ENV } from './environment';
 
 export default defineConfig({
-  testDir: '../tests/ui',   // run tests from test-platform/tests/ui
+  testDir: '../tests/ui',
 
-  fullyParallel: true,
-  workers: 1, // run tests sequentially to avoid state conflicts  
+  fullyParallel: false,
 
-  retries: 1,
+  workers: ENV.workers,
+
+  retries: ENV.retries,
+
+  reporter: [
+    ['html'],
+    ['list'],
+  ],
 
   globalTeardown: '../core/auth/globalTeardown.ts',
 
   use: {
-    baseURL: 'https://smartshop-one.vercel.app/', // change if needed
-    headless: false,
+    baseURL: ENV.baseUrl,
+
+    headless: ENV.headless,
+
     trace: 'on-first-retry',
+
+    screenshot: 'only-on-failure',
+
+    video: 'retain-on-failure',
   },
 
   projects: [
     {
       name: 'chromium',
-      use: { browserName: 'chromium' },
+
+      use: {
+        browserName: 'chromium',
+      },
     },
   ],
 });
