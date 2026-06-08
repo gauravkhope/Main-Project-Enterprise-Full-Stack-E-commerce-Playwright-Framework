@@ -10,8 +10,16 @@ export default defineConfig({
 
   retries: ENV.retries,
 
+  outputDir: '../artifacts/test-results',
+
   reporter: [
-    ['html'],
+    [
+      'html',
+      {
+        outputFolder: '../artifacts/html-report',
+        open: 'never',
+      },
+    ],
     ['list'],
   ],
 
@@ -22,17 +30,16 @@ export default defineConfig({
 
     headless: ENV.headless,
 
-    trace: 'on-first-retry',
+    trace: 'on',
 
     screenshot: 'only-on-failure',
 
-    video: 'retain-on-failure',
+    video: 'on',
   },
 
   projects: [
     {
       name: 'chromium',
-
       use: {
         browserName: 'chromium',
       },

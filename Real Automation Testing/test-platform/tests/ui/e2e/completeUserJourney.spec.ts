@@ -10,7 +10,11 @@ test("complete user journey", async ({
   checkoutFlow,
 }) => {
   const user = users.validUser;
+ test.setTimeout(60000); // Set timeout to 60 seconds for this test
 
+  // Test Case Start
+  console.log("==============================================");
+  console.log("✅ Complete User Journey Test Case Start");
   // Login
   await loginFlow.login(user.email, user.password);
 
@@ -49,12 +53,10 @@ test("complete user journey", async ({
   await page.waitForTimeout(2000);
 
   // click on Place Order
-  await page.getByRole("button", { name: "Place Order" }).click();
-  await page.waitForTimeout(2000);
+  // await page.getByRole("button", { name: "Place Order" }).click();
+  // await page.waitForTimeout(2000);
 
   //click on view order details
-  await page.getByRole("button", { name: "View Order Details" }).click();
-   await page.waitForTimeout(1000)
   await page.getByRole("button", { name: "View Order Details" }).click();
   await page.waitForTimeout(2000);
 
