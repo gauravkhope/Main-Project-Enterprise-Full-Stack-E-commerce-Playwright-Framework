@@ -1,25 +1,31 @@
 import { defineConfig } from '@playwright/test';
+import { ENV } from './environment';
 
 export default defineConfig({
-  testDir: '../tests/api',   // run tests from test-platform/tests/api
+  testDir: '../tests/api',
 
   fullyParallel: true,
-  workers: 4, // run tests sequentially to avoid state conflicts  
 
-  retries: 1,
+  workers: ENV.workers,
+
+  retries: ENV.retries,
+
+  reporter: [
+    ['html'],
+    ['list'],
+  ],
 
   globalTeardown: '../core/auth/globalTeardown.ts',
 
   use: {
-    baseURL: 'http://smartshop-api-xd4o.onrender.com', // API backend on port 5000
-    headless: true,
+    baseURL: ENV.apiUrl,
+
     trace: 'on-first-retry',
   },
 
   projects: [
     {
-      name: 'chromium',
-      use: { browserName: 'chromium' },
+      name: 'api',
     },
   ],
 });
